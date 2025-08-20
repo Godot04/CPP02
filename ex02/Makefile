@@ -1,4 +1,4 @@
-NAME	:= Towards_a_more_useful_fixed-point_number_class
+NAME	:= Now_We_are_talking
 SRC		:= main.cpp \
 			Fixed.cpp
 OBJ		:= $(SRC:.cpp=.o)
