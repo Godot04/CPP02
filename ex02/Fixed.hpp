@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: godot04 <godot04@student.42.fr>            +#+  +:+       +#+        */
+/*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 11:40:56 by godot04           #+#    #+#             */
-/*   Updated: 2025/08/20 11:49:41 by godot04          ###   ########.fr       */
+/*   Updated: 2025/08/27 14:59:00 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,24 @@ public:
 	void setRawBits( int const raw );
 	float toFloat( void ) const;
 	int toInt( void ) const;
+	bool operator>(Fixed copy);
+	bool operator<(Fixed copy);
+	bool operator>=(Fixed copy);
+	bool operator<=(Fixed copy);
+	bool operator==(Fixed copy);
+	bool operator!=(Fixed copy);
+	float operator+(Fixed copy);
+	float operator-(Fixed copy);
+	float operator*(Fixed copy);
+	float operator/(Fixed copy);
+	Fixed operator++();
+	Fixed operator--();
+	Fixed operator++(int);
+	Fixed operator--(int);
+	static Fixed &min(Fixed &var1, Fixed &var2);
+	static Fixed &max(Fixed &var1, Fixed &var2);
+	static const Fixed &min(Fixed const &var1, Fixed const &var2);
+	static const Fixed &max(Fixed const &var1, Fixed const &var2);
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
