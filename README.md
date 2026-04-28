@@ -1,63 +1,93 @@
-# C++ Exercises — CPP02
+# C++ — Module 02: Fixed-point Numbers and Operator Overloads
 
+![42 school](https://img.shields.io/badge/42-School-000000?style=flat-square&logo=42&logoColor=white)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
 ![Standard](https://img.shields.io/badge/Standard-C%2B%2B98-blue?style=flat-square)
 
 ## About
 
-This repository contains three small C++ exercises (ex00, ex01, ex02) that demonstrate basic class design, operator overloading, and the implementation of a small utility class. The code is written to be compatible with the C++98 standard and follows small, self-contained exercise constraints used in introductory OOP training.
+Module 02 focuses on implementing a small `Fixed` class (fixed-point numbers) and exploring object semantics, conversions, and operator overloading in C++98. Each exercise builds on the previous one: starting from a minimal class, adding copy semantics, and finally providing conversion and I/O-friendly behavior.
 
-## Project structure
+## Project goals
 
-- ex00/
-  - Fixed.cpp, Fixed.hpp, main.cpp, Makefile
-- ex01/
-  - Fixed.cpp, Fixed.hpp, main.cpp, Makefile
-- ex02/
-  - Fixed.cpp, Fixed.hpp, main.cpp, Makefile
-
-Each exercise implements a `Fixed` class (fixed-point number) and a small `main.cpp` demonstrating its usage. Header and implementation files are separate and a `Makefile` is provided in each exercise folder to build the corresponding example.
+- Implement a simple fixed-point numeric type with predictable behavior
+- Practice constructors, copy constructor, and assignment operator
+- Implement conversion routines and operator overloads (where required)
+- Use clean header/implementation separation and simple Makefiles
 
 ## Exercises overview
 
-- Exercise 00 — Basic class skeleton
-  - Implements a basic `Fixed` class with default constructor, destructor and a simple `main` that compiles and runs.
-  - Learning goals: project layout, header/implementation separation, building with a Makefile.
+### Exercise 00: Basic `Fixed` skeleton
+**Directory:** `ex00/`
 
-- Exercise 01 — Copy semantics and member functions
-  - Adds copy constructor, assignment operator, and additional methods to `Fixed`.
-  - Learning goals: copy constructor, operator=, proper resource handling, and value semantics.
+Implements the minimal `Fixed` class with a default constructor, destructor, and a `main.cpp` that demonstrates basic instantiation and compilation.
 
-- Exercise 02 — Operator overloads and conversions
-  - Extends `Fixed` with conversion methods and I/O-friendly behavior used from `main.cpp`.
-  - Learning goals: operator overloading, const-correctness, and small utility methods.
+Learning concepts:
+- Class skeleton and header/implementation separation
+- Default constructor and destructor
+- Building with a Makefile
+
+### Exercise 01: Copy semantics and internal state
+**Directory:** `ex01/`
+
+Extends `Fixed` with a copy constructor, assignment operator, and member functions to access internal representation.
+
+Learning concepts:
+- Copy constructor and operator=
+- Proper handling of member data
+- Const-correctness for accessors
+
+### Exercise 02: Conversions and operator-friendly behavior
+**Directory:** `ex02/`
+
+Adds conversion functions and user-facing behaviors expected in the subject: converting to/from integer/floating-point values and supporting readable output from `main.cpp`.
+
+Learning concepts:
+- Implementing conversion functions
+- Operator overloading (as required by the exercise)
+- Ensuring predictable output for demonstration programs
 
 ## Build and run
 
-Each exercise has its own `Makefile`. From the repository root run:
+Each exercise contains its own `Makefile`. To build and run an exercise from the repository root:
 
 ```bash
 cd ex00
 make
 ./ex00
 
-# repeat for ex01 and ex02
+# For other exercises:
+cd ../ex01
+make
+./ex01
+
+cd ../ex02
+make
+./ex02
 ```
 
-If the executable is named differently in the `Makefile`, run the produced binary instead (check the `Makefile`).
+If a `Makefile` produces a differently named binary, run that binary instead (check the `Makefile` target).
 
-## Compiler and flags
+## Compilation flags
 
-- Compiler: `g++` (or compatible)
-- Recommended flags: `-Wall -Wextra -Werror -std=c++98`
+- Compiler: `c++` / `g++`
+- Recommended flags: `-std=c++98 -Wall -Wextra -Werror`
 
-## Notes and style
+## Technical notes
 
-- Code targets C++98 style and simplicity; avoid modern C++ conveniences not available in C++98.
-- Keep headers guarded and avoid `using namespace` in headers.
+- Code is written to be compatible with the C++98 standard used in the module.
+- Headers should use include guards; avoid `using namespace` in headers.
+- Exercises are intentionally small and focused: prefer clarity over cleverness.
+
+## Testing
+
+Recommended checks:
+- Build each exercise with `make` and confirm the produced binary runs.
+- Verify copy semantics by inspecting output from `main.cpp` in `ex01`.
+- Check conversions and printed values in `ex02` to ensure correct behavior.
 
 ## Author
 
-opopov — student exercises and learning notes.
+**opopov** — student exercises and learning notes.
 
-If you want, I can expand the README with example outputs from each exercise, add short API notes for the `Fixed` class, or run the builds and include the exact produced binary names. Tell me which you'd prefer next.
+If you want, I can add example outputs for each exercise, include function/API notes for the `Fixed` class, or run the builds and embed produced binary names. Which would you like next?
