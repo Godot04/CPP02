@@ -88,6 +88,4 @@ Recommended checks:
 
 ## Author
 
-**opopov** — student exercises and learning notes.
-
-If you want, I can add example outputs for each exercise, include function/API notes for the `Fixed` class, or run the builds and embed produced binary names. Which would you like next?
+**opopov** — 42 school student.
