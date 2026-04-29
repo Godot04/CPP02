@@ -13,7 +13,6 @@ Module 02 focuses on implementing a small `Fixed` class (fixed-point numbers) an
 - Implement a simple fixed-point numeric type with predictable behavior
 - Practice constructors, copy constructor, and assignment operator
 - Implement conversion routines and operator overloads (where required)
-- Use clean header/implementation separation and simple Makefiles
 
 ## Exercises overview
 
@@ -66,18 +65,10 @@ make
 ./ex02
 ```
 
-If a `Makefile` produces a differently named binary, run that binary instead (check the `Makefile` target).
-
 ## Compilation flags
 
 - Compiler: `c++` / `g++`
 - Recommended flags: `-std=c++98 -Wall -Wextra -Werror`
-
-## Technical notes
-
-- Code is written to be compatible with the C++98 standard used in the module.
-- Headers should use include guards; avoid `using namespace` in headers.
-- Exercises are intentionally small and focused: prefer clarity over cleverness.
 
 ## Testing
 
@@ -88,6 +79,4 @@ Recommended checks:
 
 ## Author
 
-**opopov** — student exercises and learning notes.
-
-If you want, I can add example outputs for each exercise, include function/API notes for the `Fixed` class, or run the builds and embed produced binary names. Which would you like next?
+**opopov** — 42 School student
