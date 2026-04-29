@@ -13,7 +13,6 @@ Module 02 focuses on implementing a small `Fixed` class (fixed-point numbers) an
 - Implement a simple fixed-point numeric type with predictable behavior
 - Practice constructors, copy constructor, and assignment operator
 - Implement conversion routines and operator overloads (where required)
-- Use clean header/implementation separation and simple Makefiles
 
 ## Exercises overview
 
